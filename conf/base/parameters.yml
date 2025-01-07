@@ -1,0 +1,604 @@
+preprocessing_params:
+  breast_cancer_winsconsin:
+    name: breast_cancer_winsconsin
+    steps:
+      - rename_columns
+      - target_replace
+      - replace_missing_value
+    col_names_list:
+        - code_number
+        - clump_thickness
+        - uniformity_cell_size
+        - uniformity_cell_shape
+        - marginal_adhesion
+        - single_epithelial_cell_size
+        - bare_nuclei
+        - bland_chromatin
+        - normal_nucleoli
+        - mitoses
+        - class
+    target: 
+      col: class
+      map: 
+        2: 0
+        4: 1
+    missing_value: '?'
+  australian:
+    name: australian
+    steps:
+      - rename_columns
+    col_names_list:
+      - A1
+      - A2
+      - A3
+      - A4
+      - A5
+      - A6
+      - A7
+      - A8
+      - A9
+      - A10
+      - A11
+      - A12
+      - A13
+      - A14
+      - class
+  cylinder_bands:
+    name: cylinder_bands
+    steps:
+      - rename_columns
+      - replace_string_columns
+    col_names_list:
+      - timestamp
+      - cylinder_number
+      - customer
+      - job_number
+      - grain_screened
+      - ink_color
+      - proof_ink
+      - blade_mfg
+      - cylinder_division
+      - paper_type
+      - ink_type
+      - direct_steam
+      - solvent_type
+      - type_on_cylinder
+      - press_type
+      - press
+      - unit_number
+      - cylinder_size
+      - paper_mill_location
+      - plating_tank
+      - proof_cut
+      - viscosity
+      - caliper
+      - ink_temperature
+      - humidity
+      - roughness
+      - blade_pressure
+      - varnish_pct
+      - press_speed
+      - ink_pct
+      - solvent_pct
+      - ESA_Voltage
+      - ESA_Amperage
+      - wax
+      - hardener
+      - roller_durometer
+      - current_density
+      - anode_space_ratio
+      - chrome_content
+      - class
+  crx:
+    name: crx
+    steps:
+      - rename_columns
+      - target_replace
+      - replace_missing_value
+      - replace_string_columns
+    col_names_list:
+      - A1
+      - A2
+      - A3
+      - A4
+      - A5
+      - A6
+      - A7
+      - A8
+      - A9
+      - A10
+      - A11
+      - A12
+      - A13
+      - A14
+      - A15
+      - class
+    target: 
+      col: class
+      map: 
+        "+": 1
+        "-": 0
+    missing_value: '?'
+  german:
+    name: german
+    steps:
+      - rename_columns
+      - target_replace
+      - replace_string_columns
+    col_names_list:
+      - A1
+      - A2
+      - A3
+      - A4
+      - A5
+      - A6
+      - A7
+      - A8
+      - A9
+      - A10
+      - A11
+      - A12
+      - A13
+      - A14
+      - A15
+      - A16
+      - A17
+      - A18
+      - A19
+      - A20
+      - class
+    target: 
+      col: class
+      map: 
+        1: 0
+        2: 1
+  indian_liver_patient:
+    name: indian_liver_patient
+    steps:
+      - rename_columns
+      - target_replace
+      - replace_string_columns
+    col_names_list:
+      - A1
+      - A2
+      - A3
+      - A4
+      - A5
+      - A6
+      - A7
+      - A8
+      - A9
+      - A10
+      - class
+    target: 
+      col: class
+      map: 
+        1: 0
+        2: 1
+  ionosphere:
+    name: ionosphere
+    steps:
+      - rename_columns
+      - target_replace
+    col_names_list:
+      - A1
+      - A2
+      - A3
+      - A4
+      - A5
+      - A6
+      - A7
+      - A8
+      - A9
+      - A10
+      - A11
+      - A12
+      - A13
+      - A14
+      - A15
+      - A16
+      - A17
+      - A18
+      - A19
+      - A20
+      - A21
+      - A22
+      - A23
+      - A24
+      - A25
+      - A26
+      - A27
+      - A28
+      - A29
+      - A30
+      - A31
+      - A32
+      - A33
+      - A34
+      - class
+    target: 
+      col: class
+      map: 
+        "b": 0
+        "g": 1
+  pop_failures:
+    name: pop_failures
+    steps:
+      - remove_columns
+    columns_to_remove:
+      - Study
+      - Run
+  toxicity_2:
+    name: toxicity_2
+    steps:
+      - target_replace
+    target: 
+      col: class
+      map: 
+        "NonToxic": 0
+        "Toxic": 1
+  wine:
+    name: wine
+    steps:
+      - rename_columns
+      - target_replace
+    col_names_list:
+      - alcohol
+      - malic_acid
+      - ash
+      - alcalinity_of_ash
+      - magnesium
+      - total_phenols
+      - flavanoids
+      - nonflavanoid_phenols
+      - proanthocyanins
+      - color_intensity
+      - hue
+      - od315_of_diluted_wines
+      - proline
+      - class
+    target: 
+      col: class
+      map: 
+        'P': 0
+        'N': 1
+  diabetes:
+    name: diabetes
+    steps:
+      - rename_columns
+    col_names_list:
+      - pregnancies
+      - glucose
+      - blood_pressure
+      - skin_thickness
+      - insulin
+      - bmi
+      - diabetes_pedigree_function
+      - age
+      - class
+  circles:
+    name: circles
+    args:
+      n_samples: 500
+      random_state: 42
+  moons:
+    name: moons
+    args:
+      n_samples: 500
+      random_state: 42
+  blobs_2:
+    name: blobs_2
+    args:
+      centers: 2
+      n_samples: 500
+      n_features: 2
+      random_state: 42
+  blobs_3:
+    name: blobs_3
+    args:
+      centers: 2
+      n_samples: 500
+      n_features: 3
+      random_state: 42
+  blobs_5:
+    name: blobs_5
+    args:
+      centers: 2
+      n_samples: 500
+      n_features: 5
+      random_state: 42
+  blobs_7:
+    name: blobs_7
+    args:
+      centers: 2
+      n_samples: 500
+      n_features: 7
+      random_state: 42
+  classification_5:
+    name: classification_5
+    args:
+      n_samples: 50
+      n_features: 5
+      random_state: 42
+  classification_7:
+    name: classification_7
+    args:
+      n_samples: 50
+      n_features: 7
+      random_state: 42
+  gaussian_quantiles_2:
+    name: gaussian_quantiles_2
+    args:
+      n_samples: 200
+      n_features: 2
+      random_state: 42
+      n_classes: 2
+  gaussian_quantiles_3:
+    name: gaussian_quantiles_3
+    args:
+      n_samples: 200
+      n_features: 3
+      random_state: 42
+      n_classes: 2
+  gaussian_quantiles_5:
+    name: gaussian_quantiles_5
+    args:
+      n_samples: 200
+      n_features: 5
+      random_state: 42
+      n_classes: 2
+  gaussian_quantiles_7:
+    name: gaussian_quantiles_7
+    args:
+      n_samples: 200
+      n_features: 7
+      random_state: 42
+      n_classes: 2
+  balloons_adult_stretch:
+    name: balloons_adult_stretch
+    steps:
+      - target_replace
+      - replace_string_columns
+    target: 
+      col: class
+      map: 
+        1: 0
+        2: 1
+  balloons_adult_plus_stretch:
+    name: balloons_adult_plus_stretch
+    steps:
+      - target_replace
+      - replace_string_columns
+    target: 
+      col: class
+      map: 
+        1: 0
+        2: 1
+  balloons_yellow_small:
+    name: balloons_yellow_small
+    steps:
+      - target_replace
+      - replace_string_columns
+    target: 
+      col: class
+      map: 
+        1: 0
+        2: 1
+  analcatdata_fraud:
+    name: analcatdata_fraud
+    steps:
+      - target_replace
+    target: 
+      col: class
+      map: 
+        0: 0
+        1: 1
+  analcatdata_donner:
+    name: analcatdata_donner
+    steps:
+      - target_replace
+      - replace_string_columns
+    target: 
+      col: class
+      map: 
+        'Yes': 1
+        'No': 0
+  analcatdata_boxing:
+    name: analcatdata_boxing
+    steps:
+      - target_replace
+      - replace_string_columns
+    target: 
+      col: class
+      map: 
+        'Lewis': 1
+        'Holyfield': 0
+  analcatdata_boxing2:
+    name: analcatdata_boxing2
+    steps:
+      - target_replace
+      - replace_string_columns
+    target: 
+      col: class
+      map: 
+        'de la Hoya': 1
+        'Trinidad': 0
+  blogger:
+    name: blogger
+    steps:
+      - target_replace
+      - replace_string_columns
+    target: 
+      col: class
+      map: 
+        2: 1
+        1: 0
+  molecular_promotor_gene:
+    name: molecular_promotor_gene
+    steps:
+      - target_replace
+      - replace_string_columns
+    target: 
+      col: class
+      map: 
+        2: 1
+        1: 0
+  monks1:
+    name: monks1
+    steps:
+      - target_replace
+    target: 
+      col: class
+      map: 
+        2: 1
+        1: 0
+  monks2:
+    name: monks2
+    steps:
+      - target_replace
+    target: 
+      col: class
+      map: 
+        2: 1
+        1: 0
+  qualitative_brankruptcy:
+    name: qualitative_brankruptcy
+    steps:
+      - target_replace
+    target: 
+      col: class
+      map: 
+        2: 1
+        1: 0
+  shuttle_landing_control:
+    name: shuttle_landing_control
+    steps:
+      - target_replace
+    target: 
+      col: class
+      map: 
+        2: 1
+        1: 0
+  tic_tac_toe:
+    name: tic_tac_toe
+    steps:
+      - target_replace
+    target: 
+      col: class
+      map: 
+        2: 1
+        1: 0
+  blood_transfusion_service:
+    name: blood_transfusion_service
+    steps:
+      - target_replace
+    target: 
+      col: class
+      map: 
+        2: 1
+        1: 0
+  vertebra_column_2c:
+    name: vertebra_column_2c
+    steps:
+      - target_replace
+    target: 
+      col: class
+      map: 
+        2: 1
+        1: 0
+  qsar_biodegradation:
+    name: qsar_biodegradation
+    steps:
+      - target_replace
+    target: 
+      col: class
+      map: 
+        2: 1
+        1: 0
+  wdbc:
+    name: wdbc
+    steps:
+      - target_replace
+    target: 
+      col: class
+      map: 
+        2: 1
+        1: 0
+  analcatdata_creditscore:
+    name: analcatdata_creditscore
+    steps:
+      - target_replace
+    target: 
+      col: class
+      map: 
+        1: 1
+        0: 0
+  analcatdata_cyyoung8092:
+    name: analcatdata_cyyoung8092
+    steps:
+      - target_replace
+      - replace_string_columns
+    target: 
+      col: class
+      map: 
+        1: 1
+        0: 0
+  analcatdata_cyyoung9302:
+    name: analcatdata_cyyoung9302
+    steps:
+      - target_replace
+      - replace_string_columns
+    target: 
+      col: class
+      map: 
+        1: 1
+        0: 0
+  analcatdata_lawsuit:
+    name: analcatdata_lawsuit
+    steps:
+      - target_replace
+    target: 
+      col: class
+      map: 
+        1: 1
+        0: 0
+  biomed:
+    name: biomed
+    steps:
+      - target_replace
+    target: 
+      col: class
+      map: 
+        carrier: 1
+        normal: 0
+  spirals:
+    name: spirals
+    steps:
+      - target_replace
+    target: 
+      col: class
+      map: 
+        2: 1
+        1: 0
+  two_dnormals:
+    name: two_dnormals
+    steps:
+      - target_replace
+    target:
+      col: class
+      map: 
+        2: 1
+        1: 0
+modeling_params:
+  list_of_algorithms:
+    - decision_tree
+    - naive_bayes
+    - svm
+  list_of_levels: [1, 2, 4, 8]
+  tree_meta_algorithm: decision_tree
+  naive_bayes_meta_algorithm: naive_bayes
+  svm_meta_algorithm: svm
+validation_params:
+  n_splits: 3
+  random_state: 42
+  shuffle: True

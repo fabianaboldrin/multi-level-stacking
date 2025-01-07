@@ -1,0 +1,336 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+#---- Raw -----------------------------
+raw_australian:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/australian.dat
+
+raw_cylinder_bands:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/cylinder_bands.data
+
+raw_breast_cancer_winsconsin:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/breast-cancer-wisconsin.data
+
+raw_crx:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/crx.data
+
+raw_german:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/german.data
+
+raw_indian_liver_patient:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/indian_liver_patient_dataset.csv
+
+raw_ionosphere:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/ionosphere.data
+
+raw_pop_failures:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/pop_failures.dat
+
+raw_toxicity_2:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/toxicity_2.csv
+
+raw_wine:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/wine.arff
+
+raw_diabetes:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/diabetes.csv
+
+raw_balloons_adult_stretch:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/balloons-adult-stretch.csv
+
+raw_balloons_adult_plus_stretch:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/balloons-adult+stretch.csv
+
+raw_balloons_yellow_small:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/balloons-yellow-small.csv
+
+raw_analcatdata_fraud:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/fraud.csv
+
+raw_analcatdata_donner:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/donner.csv
+
+raw_analcatdata_boxing:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/boxing1.csv
+
+raw_analcatdata_boxing2:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/boxing2.csv
+
+raw_blogger:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/blogger.csv
+
+raw_molecular_promotor_gene:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/molecular-promotor-gene.csv
+
+raw_monks1:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/monks1.csv
+
+raw_monks2:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/monks2.csv
+
+raw_qualitative_brankruptcy:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/qualitative-bankruptcy.csv
+
+raw_shuttle_landing_control:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/shuttle-landing-control.csv
+
+raw_tic_tac_toe:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/tic-tac-toe.csv
+
+raw_blood_transfusion_service:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/blood-transfusion-service.csv
+
+raw_vertebra_column_2c:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/vertebra-column-2c.csv
+
+raw_qsar_biodegradation:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/qsar-biodegradation.csv
+
+raw_wdbc:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/wdbc.csv
+
+raw_analcatdata_creditscore:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/analcatdata-creditscore.csv
+
+raw_analcatdata_cyyoung8092:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/analcatdata-cyyoung8092.csv
+
+raw_analcatdata_cyyoung9302:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/analcatdata-cyyoung9302.csv
+
+raw_analcatdata_lawsuit:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/analcatdata-lawsuit.csv
+
+raw_biomed:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/biomed.csv
+
+#---- Intermediate -----------------------------
+int_australian:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/australian.csv
+
+int_cylinder_bands:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/cylinder_bands.csv
+
+int_breast_cancer_winsconsin:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/breast-cancer-wisconsin.csv
+
+int_crx:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/crx.csv
+
+int_german:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/german.csv
+
+int_indian_liver_patient:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/indian_liver_patient.csv
+
+int_ionosphere:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/ionosphere.csv
+
+int_pop_failures:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/pop_failures.csv
+
+int_toxicity_2:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/toxicity_2.csv
+
+int_wine:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/wine.csv
+
+int_diabetes:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/diabetes.csv
+
+int_balloons_adult_stretch:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/balloons_adult_stretch.csv
+
+int_balloons_adult_plus_stretch:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/balloons_adult_plus_stretch.csv
+
+int_balloons_yellow_small:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/balloons_yellow_small.csv
+
+int_analcatdata_fraud:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/fraud.csv
+
+int_analcatdata_donner:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/donner.csv
+
+int_analcatdata_boxing:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/boxing1.csv
+
+int_analcatdata_boxing2:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/boxing2.csv
+
+int_blogger:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/blogger.csv
+
+int_molecular_promotor_gene:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/molecular-promotor-gene.csv
+
+int_monks1:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/monks1.csv
+
+int_monks2:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/monks2.csv
+
+int_qualitative_brankruptcy:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/qualitative_bankruptcy.csv
+
+int_shuttle_landing_control:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/shuttle_landing_control.csv
+
+int_tic_tac_toe:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/tic_tac_toe.csv
+
+int_blood_transfusion_service:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/blood_transfusion_service.csv
+
+int_vertebra_column_2c:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/vertebra_column_2c.csv
+
+int_qsar_biodegradation:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/qsar_biodegradation.csv
+
+int_wdbc:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/wdbc.csv
+
+int_analcatdata_creditscore:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/analcatdata_creditscore.csv
+
+int_analcatdata_cyyoung8092:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/analcatdata_cyyoung8092.csv
+
+int_analcatdata_cyyoung9302:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/analcatdata_cyyoung9302.csv
+
+int_analcatdata_lawsuit:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/analcatdata_lawsuit.csv
+
+int_biomed:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/biomed.csv
+
+#---- Artificial Intermediate -----------------------------
+
+int_circles:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/circles.csv
+
+int_moons:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/moons.csv
+
+int_blobs_2:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/blobs_2.csv
+
+int_blobs_3:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/blobs_3.csv
+
+int_blobs_5:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/blobs_5.csv
+
+int_blobs_7:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/blobs_7.csv
+
+int_classification_5:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/classification_5.csv
+
+int_classification_7:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/classification_7.csv
+
+int_gaussian_quantiles_2:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/gaussian_quantiles_2.csv
+
+int_gaussian_quantiles_3:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/gaussian_quantiles_3.csv
+
+int_gaussian_quantiles_5:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/gaussian_quantiles_5.csv
+
+int_gaussian_quantiles_7:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/gaussian_quantiles_7.csv
+
+int_spirals:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/spirals.csv
+
+int_two_dnormals:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/two-dnormals.csv

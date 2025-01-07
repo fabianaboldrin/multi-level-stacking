@@ -1,0 +1,20 @@
+breast-cancer-wisconsin:
+  read_args:
+    names: 
+      - code_number
+      - clump_thickness
+      - uniformity_cell_size
+      - uniformity_cell_shape
+      - marginal_adhesion
+      - single_epithelial_cell_size
+      - bare_nuclei
+      - bland_chromatin
+      - normal_nucleoli
+      - mitoses
+      - class
+  target: 
+    col: class
+    map: 
+      2: 0
+      4: 1
+  missing_value: '?'
